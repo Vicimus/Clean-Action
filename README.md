@@ -13,4 +13,4 @@ None
 
 ## Example usage
 
-uses: actions/clean-action@v1
+uses: vicimus/clean-action@v1
