@@ -143,14 +143,12 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Cleaner = void 0;
+exports.clean = void 0;
 const fs = __importStar(__webpack_require__(747));
-class Cleaner {
-    clean(workspace) {
-        fs.rmdirSync(workspace, { recursive: true });
-    }
+function clean(workspace) {
+    fs.rmdirSync(workspace + '/../', { recursive: true });
 }
-exports.Cleaner = Cleaner;
+exports.clean = clean;
 
 
 /***/ }),
@@ -182,8 +180,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const core = __importStar(__webpack_require__(470));
 const state = __importStar(__webpack_require__(496));
-const cleaner_1 = __webpack_require__(180);
-const cleaner = new cleaner_1.Cleaner();
+const cleaner = __importStar(__webpack_require__(180));
 const workspace = core.getInput('workspace');
 if (state.isPost) {
     cleaner.clean(workspace);
