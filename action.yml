@@ -1,0 +1,6 @@
+name: 'Clean Action'
+description: 'Clean the workspace after all steps are done'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+  post: 'dist/index.js'
