@@ -146,7 +146,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.clean = void 0;
 const fs = __importStar(__webpack_require__(747));
 function clean(workspace) {
-    fs.rmdirSync(workspace + '/../', { recursive: true });
+    fs.rmdirSync(workspace, { recursive: true });
 }
 exports.clean = clean;
 
