@@ -5,7 +5,8 @@ import { Cleaner } from './cleaner';
 const cleaner = new Cleaner();
 
 if (!state.isPost) {
-    core.debug('Do nothing because this is not post');
+    console.info('Do nothing because this is not post');
 } else {
+    console.log('cleaning');
     cleaner.clean();
 }

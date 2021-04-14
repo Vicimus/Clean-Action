@@ -568,26 +568,18 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Cleaner = void 0;
 const core = __importStar(__webpack_require__(470));
 const github = __importStar(__webpack_require__(469));
 class Cleaner {
     clean() {
-        return __awaiter(this, void 0, void 0, function* () {
-            core.info('Going to remove some files brah');
-            core.info(github.context['workspace']);
-            core.info(JSON.stringify(process.env));
-        });
+        core.info('Going to remove some files brah');
+        core.info(github.context['workspace']);
+        core.info(JSON.stringify(process.env));
+        console.info('Going to remove some files brah');
+        console.info(github.context['workspace']);
+        console.info(JSON.stringify(process.env));
     }
 }
 exports.Cleaner = Cleaner;
@@ -620,14 +612,14 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const core = __importStar(__webpack_require__(470));
 const state = __importStar(__webpack_require__(496));
 const cleaner_1 = __webpack_require__(180);
 const cleaner = new cleaner_1.Cleaner();
 if (!state.isPost) {
-    core.debug('Do nothing because this is not post');
+    console.info('Do nothing because this is not post');
 }
 else {
+    console.log('cleaning');
     cleaner.clean();
 }
 
