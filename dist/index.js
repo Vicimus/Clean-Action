@@ -612,9 +612,13 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const core = __importStar(__webpack_require__(470));
 const state = __importStar(__webpack_require__(496));
 const cleaner_1 = __webpack_require__(180);
 const cleaner = new cleaner_1.Cleaner();
+const workspace = core.getInput('workspace');
+console.info(workspace);
+console.info(process.env);
 if (!state.isPost) {
     console.info('Do nothing because this is not post');
 }
