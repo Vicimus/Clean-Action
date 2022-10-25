@@ -6,6 +6,6 @@ inputs:
       The path to the workspace that we will clean up after everything is done
     default: ${{ github.workspace }}
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
   post: 'dist/index.js'
